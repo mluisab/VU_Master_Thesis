@@ -1,0 +1,404 @@
+{
+  "dependency_gating" :{
+    "sentinel_value" : "not_asked"
+  },
+
+ "symptoms": [
+    {
+      "SymptomID": "TWC-000",
+      "FSN": "Twitching",
+      "SCTID": "249966004",
+      "Active": { "values": ["Yes", "No"], "weights": [0.25, 0.75] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "TWC-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        },
+        {
+          "AssessmentID": "TWC-002", 
+          "FSN": "Symptom Temporal Pattern",
+          "Active": { "values": ["After physical activity", "When resting", "At unpredictable times", "All the time"] }
+        },
+        {
+          "AssessmentID": "TWC-003", 
+          "FSN": "Symptom Presentation",
+          "Active": { "values": ["Sudden jerks", "Trembling", "Shaking", "Muscle cramps or spasms"] }
+        },
+        {
+          "AssessmentID": "TWC-004", 
+          "FSN": "Symptom Location",
+          "Active": { "values": ["Arms or hands", "Legs or feet", "Face", "All over body"] }
+        }
+      ]
+      }
+    },
+
+    {
+      "SymptomID": "HAL-000",
+      "FSN": "Hallucinations",
+      "SCTID": "7011001",
+      "Active": { "values": ["Yes", "No"], "weights": [0.13, 0.87] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "HAL-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        },
+        {
+          "AssessmentID": "HAL-002", 
+          "FSN": "Symptom Temporal Pattern",
+          "Active": { "values": ["After medication", "At unpredictable times", "All the time"] }
+        },
+        {
+          "AssessmentID": "HAL-003", 
+          "FSN": "Symptom Onset Timing",
+          "Active": { "values": ["Within the last 24h", "Within the last few days", "Within the last week"] }
+        }
+      ]
+    }
+    },
+    {
+      "SymptomID": "DRW-000",
+      "FSN": "Drowsiness",
+      "SCTID": "79519003",
+      "Active": { "values": ["Yes", "No"], "weights": [0.45, 0.55]},
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "DRW-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        },
+        {
+          "AssessmentID": "DRW-002", 
+          "FSN": "Symptom Temporal Pattern",
+          "Active": { "values": ["In the morning", "In the evening", "After drinking or eating", "At unpredictable times", "All the time"] }
+        }
+      ]
+    }
+    },
+    {
+      "SymptomID": "SED-000",
+      "FSN": "Sedation",
+      "SCTID": "372947007",
+      "Active": { "values": ["Yes", "No"], "weights": [0.25, 0.75] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "SED-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        },
+        {
+          "AssessmentID": "SED-002", 
+          "FSN": "Symptom Presentation",
+          "Active": { "values": ["Involuntary sleep episodes", "Difficulty to stay awake", "Difficulty to be woken up"] }
+        }
+      ]
+    }
+    },
+    {
+      "SymptomID": "SLS-000",
+      "FSN": "Slurred Speech",
+      "SCTID": "289195008",
+      "Active": { "values": ["Yes", "No"], "weights": [0.25, 0.75] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "SLS-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        },
+        {
+          "AssessmentID": "SLS-002", 
+          "FSN": "Symptom Temporal Pattern",
+          "Active": { "values": ["After medication", "When tired", "At unpredictable times", "All the time"] }
+        },
+        {
+          "AssessmentID": "SLS-003", 
+          "FSN": "Symptom Presentation",
+          "Active": { "values": ["Sounds normal", "Sounds slurred", "Sounds incoherent", "Sounds slurred and incoherent"] }
+        },
+        {
+          "AssessmentID": "SLS-004", 
+          "FSN": "Symptom Onset Timing",
+          "Active": { "values": ["Sudden", "Gradual"] }
+        }
+      ]
+    }
+    },
+    {
+      "SymptomID": "AGT-000",
+      "FSN": "Agitation",
+      "SCTID": "24199005",
+      "Active": { "values": ["Yes", "No"], "weights": [0.25, 0.75] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "AGT-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        }
+      ]
+    }
+    },
+     {
+      "SymptomID": "CON-000",
+      "FSN": "Confusion",
+      "SCTID": "40917007",
+      "Active": { "values": ["Yes", "No"], "weights": [0.45, 0.55] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "CON-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        },
+        {
+          "AssessmentID": "CON-002", 
+          "FSN": "Symptom Temporal Pattern",
+          "Active": { "values": ["In the evening", "At unpredictable times", "All the time"] }
+        },
+        {
+          "AssessmentID": "CON-003", 
+          "FSN": "Symptom Presentation - Time and Space Awareness",
+          "Active": { "values": ["Yes", "No"] }
+        },
+        {
+          "AssessmentID": "CON-004", 
+          "FSN": "Symptom Onset Timing",
+          "Active": { "values": ["Sudden", "Gradual"] }
+        }
+      ]
+    }
+    },
+     {
+      "SymptomID": "DIZ-000",
+      "FSN": "Dizziness",
+      "SCTID": "404640003",
+      "Active": { "values": ["Yes", "No"], "weights": [0.25, 0.75] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "DIZ-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        },
+        {
+          "AssessmentID": "DIZ-002", 
+          "FSN": "Symptom Temporal Pattern",
+          "Active": { "values": ["When standing up", "At unpredictable times", "All the time"] }
+        },
+        {
+          "AssessmentID": "DIZ-003", 
+          "FSN": "Symptom Presentation",
+          "Active": { "values": ["Light-headed", "Faint", "Unsteady", "Vertigo"] }
+        }
+      ]
+    }
+    },
+     {
+      "SymptomID": "VOM-000",
+      "FSN": "Vomiting",
+      "SCTID": "422400008",
+      "Active": { "values": ["Yes", "No"], "weights": [0.13, 0.87] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "VOM-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        }
+      ]
+    }
+    },
+     {
+      "SymptomID": "NAU-000",
+      "FSN": "Nausea",
+      "SCTID": "422587007",
+      "Active": { "values": ["Yes", "No"], "weights": [0.13, 0.87] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "NAU-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        }
+      ]
+    }
+    },
+     {
+      "SymptomID": "PPL-000",
+      "FSN": "Pin point pupils",
+      "SCTID": "271608006",
+      "Active": { "values": ["Yes", "No"], "weights": [0.13, 0.87] }
+    },
+     {
+      "SymptomID": "COD-000",
+      "FSN": "Incoordination",
+      "SCTID": "281016006",
+      "Active": { "values": ["Yes", "No"], "weights": [0.13, 0.87] },
+      "SymptomAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "COD-001", 
+          "FSN": "Symptom Evolution",
+          "Active": { "values": ["Worse", "Same as usual", "New symptom"] }
+        }
+      ]
+    }
+    },
+     {
+      "SymptomID": "CYN-000",
+      "FSN": "Cyanosis",
+      "SCTID": "3415004",
+      "Active": { "values": ["Yes", "No"], "weights": [0.13, 0.87] }
+    }
+  ],
+  
+  "vitals":[
+    {
+      "VitalSignID": "OXG-000",
+      "FSN": "Oxygen Saturation",
+      "SCTID": "431314004",
+      "Vital_Measurement": { 
+        "ranges": [
+      { "label": "<94",  "min": 89, "max": 93, "weight": 0.35 },
+      { "label": ">=94", "min": 94, "max": 99, "weight": 0.65 }
+      ]
+      }
+    },
+    {
+      "VitalSignID": "RSP-000",
+      "FSN": "Respiratory Rate",
+      "SCTID": "86290005",
+      "Vital_Measurement": {
+        "ranges": [
+      { "label": "<12",  "min": 10, "max": 11, "weight": 0.25 },
+      { "label": "12-24", "min": 12, "max": 24, "weight": 0.65 },
+      { "label": ">=25", "min": 25, "max": 30 , "weight": 0.10 }
+      ]
+      }
+    },
+    {
+      "VitalSignID": "BPM-000",
+      "FSN": "Heart Rate",
+      "SCTID": "364075005",
+      "Vital_Measurement": { 
+        "ranges": [
+      { "label": "<50",  "min": 40, "max": 49, "weight": 0.35 },
+      { "label": ">=50", "min": 50, "max": 100, "weight": 0.65 }
+        ]
+      }
+    }
+  ],
+
+  "risk_factors": [
+    {
+      "RiskFactorID": "REN-000",
+      "FSN": "Renal Impairment",
+      "SCTID": "236423003",
+      "Active": { "values": ["Yes", "No"],  "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "LIV-000",
+      "FSN": "Disorder of Liver",
+      "SCTID": "235856003",
+      "Active": { "values": ["Yes", "No"],  "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "SAP-000",
+      "FSN": "Sleep apnea",
+      "SCTID": "73430006",
+      "Active": { "values": ["Yes", "No"], "weights": [0.15, 0.85] }
+    },
+    {
+      "RiskFactorID": "LNG-000",
+      "FSN": "Chronic Obstructive Pulmonary Disease",
+      "SCTID": "13645005",
+      "Active": { "values": ["Yes", "No"], "weights": [0.15, 0.85] }
+    },
+    {
+      "RiskFactorID": "MED-ANX-000",
+      "FSN": "Antidepressant drug therapy",
+      "SCTID": "698456001",
+      "Active": { "values": ["Yes", "No"], "weights": [0.15, 0.85] }
+    },
+    {
+      "RiskFactorID": "MED-APS-000",
+      "FSN": "Antipsychotic drug therapy",
+      "SCTID": "408490001",
+      "Active": { "values": ["Yes", "No"], "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "MED-STM-000",
+      "FSN": "Stimulant drug therapy",
+      "SCTID": "788428005",
+      "Active": { "values": ["Yes", "No"], "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "MED-REC-000",
+      "FSN": "Recreational drug use",
+      "SCTID": "424848002",
+      "Active": { "values": ["Yes", "No"], "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "MED-OPD-001",
+      "FSN": "Opioid treatment naive",
+      "SCTID": "844585000",
+      "Active": { "values": ["Yes", "No"], "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "MED-OPD-002",
+      "FSN": "Opioid medication increase",
+      "SCTID": "182878004",
+      "Active": { "values": ["Yes", "No"], "weights": [0.35, 0.65] },
+      "RiskFactorAssessment": {
+        "attributes": [
+        {
+          "AssessmentID": "MED-OPD-002-1", 
+          "FSN": "Onset timeframe",
+          "Active": { "values": ["In the last 1-6 days", "In the last 7-14 days"] }
+        }
+      ]
+    }
+    },
+    {
+      "RiskFactorID": "MED-OPD-003",
+      "FSN": "Change of brand or formula",
+      "SCTID": "182838006",
+      "Active": { "values": ["Yes", "No"], "weights": [0.35, 0.65] }
+    },
+    {
+      "RiskFactorID": "ALC-000",
+      "FSN": "Alcohol disorder",
+      "SCTID": "1336085007",
+      "Active": { "values": ["Yes", "No"], "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "HST-OPX-000",
+      "FSN": "History of repeated overdose",
+      "SCTID": "390867000",
+      "Active": { "values": ["Yes", "No"], "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "INF-000",
+      "FSN": "Infection",
+      "SCTID": "40733004",
+      "Active": { "values": ["Yes", "No"], "weights": [0.10, 0.90] }
+    },
+    {
+      "RiskFactorID": "AGE-000",
+      "FSN": "Current chronological age",
+      "SCTID": "424144002",
+      "Threshold_Measurement": { "values": ["Below 65", "65 or Above"], "weights": [0.50, 0.50] }
+    }
+  ]
+}
+
+       
+    
+  
