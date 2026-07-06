@@ -64,7 +64,7 @@ In order to reproduce the results of the research, run the notebooks in the foll
 ##### Knowledge-driven synthetic data generation:
 1. `data_generation.ipynb`: Generates the synthetic patient dataset without risk levels. Output is `dataset.csv`.
 2. `dataset_analysis.ipynb`: Runs exploratory data analysis. Requires the independent clinician-labelled datasets (`dataset_c1.csv`, `dataset_c2.csv`, `dataset_c3.csv`) and the final dataset with the merged risk labels (`MV_dataset.csv`). Output is EDA figures and inter-rater agreement analysis.
-3. `knowledge_graph.ipynb`: Creates the knowledge graph serialised through RDF Turtle. Requires access to the labelled dataset (`MV_dataset.csv`) and the JSON data specification file (`feature_spec.json`). 
+3. `knowledge_graph.ipynb`: Creates the knowledge graph serialised through RDF Turtle. Requires access to the labelled dataset (`MV_dataset.csv`) and the JSON data specification file (`feature_spec.json`). To note, the TabPFN model requires an API key, which can be received once a free account is created.
   
 ##### Evaluation of proof of concept
 1. `survey_analysis.ipynb`: Runs analysis of survey results, requires survey data (`validation_survey.xlsx`).
