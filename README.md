@@ -23,7 +23,7 @@ This project, titled "Knowledge-Driven Synthetic Dataset Generation for Clinical
 ### Dataset
 All patient records within the dataset are fully synthetic, and no real patient information was used throughout this project. The dataset is structured in a tabular format, with columns representing clinical features and rows representing one patient scenario. The following data is included:
 - patient_ID: representing a random ID number to identify patient scenarios
-- Symptom, risk factors and vital feature codes, where codes ending in -000 represent presence of core clinical features except for MED-OPD-001, MED-OPD-002, and MED-OPD-003 which are related to the patient's opioid treatment.
+- Symptom, risk factors and vital feature codes, where codes ending in -000 represent the presence of core clinical features except for MED-OPD-001, MED-OPD-002, and MED-OPD-003 which are related to the patient's opioid treatment.
 - Patient_Summary: a narrative, natural language text summarizing the patient's health profile
 - Outcome: the risk level of having opioid toxicity as labelled by domain experts
 
@@ -33,7 +33,7 @@ Note: the synthetic dataset generated is a proof of concept intended to demonstr
 The following notebooks generate figures and tables presented within the report:
 - `feature_spec.json`: The output of this file is presented as a listing within the report, specifically Listing 1: Example Symptom Entry JSON Specification and Listing 2: Example Vital Entry JSON Specification
 - `dataset_analysis.ipynb`: The output of this analysis includes Figure 3: Count of Clinical Features per Risk Level (rf_count. pdf and symptom_count.pdf); Figure 4: Cramer’s Analysis of Association of Features and Risk Level (cramer_analysis.pdf); Figure 5: Spearman Correlation Analysis for Vital Signs (spearman_analysis.pdf); Figure 8: Vital Measurement Ranges across Risk Level (vital_count.pdf); Figure 9: Cramer’s Association Matrix (cramer_matrix.pdf); Figure 10: Cramer’s Association Matrix – Conditional Features (cramer_matrix_conditional.pdf)
-- `ML_evaluation.ipynb`: The output of this analysis includes the following figures and tables within the report Table 4: Baseline Model Performance, Table 5: Model performance with class weighting, Table 6: Model performance with SMOTE-NC, igure 13: Confusion Matrices of Baseline Models (LG-confusion.pdf, RF-confusion.pdf, SVM-confusion.pdf, TPFN-confusion.pdf, XGB-confusion.pdf)
+- `ML_evaluation.ipynb`: The output of this analysis includes the following figures and tables within the report Table 4: Baseline Model Performance, Table 5: Model performance with class weighting, Table 6: Model performance with SMOTE-NC, Figure 13: Confusion Matrices of Baseline Models (LG-confusion.pdf, RF-confusion.pdf, SVM-confusion.pdf, TPFN-confusion.pdf, XGB-confusion.pdf)
 - `survey_analysis.ipynb`: The output of this analysis is presented as Figure 6: Plausibility Ratings across Scenarios (overall_rating.pdf); Figure 12: Distribution of Plausibility Scores across Scenarios (rating_distribution.pdf)
 - `knowledge_graph.ipynb` and `knowledge_graph.graphml`: These files were used to create an interactive graph visualisation as mentioned in the report, Figure 11: Knowledge Graph Visualisation. 
 
@@ -64,11 +64,11 @@ In order to reproduce the results of the research, run the notebooks in the foll
 ##### Knowledge-driven synthetic data generation:
 1. `data_generation.ipynb`: Generates the synthetic patient dataset without risk levels. Output is `dataset.csv`.
 2. `dataset_analysis.ipynb`: Runs exploratory data analysis. Requires the independent clinician-labelled datasets (`dataset_c1.csv`, `dataset_c2.csv`, `dataset_c3.csv`) and the final dataset with the merged risk labels (`MV_dataset.csv`). Output is EDA figures and inter-rater agreement analysis.
-3. `knowledge_graph.ipynb`: Creates the knowledge graph serialised through RDF Turtle. Requires access to the labelled dataset (`MV_dataset.csv`) and the JSON data specification file (`feature_spec.json`). To note, the TabPFN model requires an API key, which can be received once a free account is created.
+3. `knowledge_graph.ipynb`: Creates the knowledge graph serialised through RDF Turtle. Requires access to the labelled dataset (`MV_dataset.csv`) and the JSON data specification file (`feature_spec.json`).
   
 ##### Evaluation of proof of concept
 1. `survey_analysis.ipynb`: Runs analysis of survey results, requires survey data (`validation_survey.xlsx`).
-2. `ML_evaluation.ipynb`: Runs all ML models on the generated dataset. Requires access to the labelled dataset (`MV_dataset.csv`).
+2. `ML_evaluation.ipynb`: Runs all ML models on the generated dataset. Requires access to the labelled dataset (`MV_dataset.csv`). To note, the TabPFN model requires an API key, which can be received once a free account is created.
 
 ## Authors and Acknowledgements
 The author of this repository is Maria Luisa Baba (VunetID: pmb772, Student no: 2896045), with the project being developed in collaboration with Pal Helps (Amie Technologies B.V).
