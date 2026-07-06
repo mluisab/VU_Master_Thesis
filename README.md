@@ -62,7 +62,7 @@ python-dotenv
 In order to reproduce the results of the research, run the notebooks in the following order:
 
 ##### Knowledge-driven synthetic data generation:
-1. `data_generation.ipynb`: Generates the synthetic patient dataset without risk levels. Output is `dataset.csv`.
+1. `data_generation.ipynb`: Generates the synthetic patient dataset without risk levels. Output is `dataset.csv`. To note, generation of records may produce different scenarios from the original dataset due to probabilistic and rejection-based sampling. To recreate analysis results, `MV_dataset.csv` should be used as the original dataset with labels.
 2. `dataset_analysis.ipynb`: Runs exploratory data analysis. Requires the independent clinician-labelled datasets (`dataset_c1.csv`, `dataset_c2.csv`, `dataset_c3.csv`) and the final dataset with the merged risk labels (`MV_dataset.csv`). Output is EDA figures and inter-rater agreement analysis.
 3. `knowledge_graph.ipynb`: Creates the knowledge graph serialised through RDF Turtle. Requires access to the labelled dataset (`MV_dataset.csv`) and the JSON data specification file (`feature_spec.json`).
   
